@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Onry</title>
+  <meta name="description" content="Get in touch about Onry." />
+  <link rel="icon" href="/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <img class="logo" src="/assets/logo.png" alt="Onry logo" />
+      <span class="name"><a href="/" style="color:inherit">Onry</a></span>
+    </header>
+
+    <main>
+      <h1>Contact</h1>
+      <p class="tagline">Questions, feedback, or want to try the beta? Send us a message.</p>
+
+      <form class="card" action="https://formspree.io/f/xgaejzyq" method="POST">
+        <label for="email">Your email</label>
+        <input id="email" type="email" name="_replyto" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="_subject" value="New message from onry.jjhale.com" />
+
+        <button type="submit">Send</button>
+      </form>
+    </main>
+
+    <footer class="site">
+      &copy; <span id="year"></span> Joe Hale · <a href="/">Home</a>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

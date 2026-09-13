@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onry</title>
+  <meta name="description" content="Onry is an app for caregivers to log and track care events for the people they care for." />
+  <link rel="icon" href="/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <img class="logo" src="/assets/logo.png" alt="Onry logo" />
+      <span class="name">Onry</span>
+    </header>
+
+    <main>
+      <h1>Caregiving, tracked together.</h1>
+      <p class="tagline">
+        Onry helps caregivers log events, share updates with their care team, and keep
+        a clear history for the people they care for.
+      </p>
+
+      <div class="card">
+        <p style="margin:0">
+          Onry is currently in private beta. If you're interested in trying it out,
+          reach out below.
+        </p>
+      </div>
+
+      <div class="links">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </main>
+
+    <footer class="site">
+      &copy; <span id="year"></span> Joe Hale
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
