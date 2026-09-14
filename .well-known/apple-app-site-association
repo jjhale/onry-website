@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["S5T9U2DUHF.com.jjhale.onry"],
+        "components": [
+          {
+            "/": "/i",
+            "comment": "Care team invite links: https://onry.jjhale.com/i#<code>"
+          }
+        ]
+      }
+    ]
+  }
+}

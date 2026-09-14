@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--
+    Invite links look like https://onry.jjhale.com/i#<code>. With Onry installed, iOS opens
+    the app directly and this page never loads. The code is in the URL fragment, which
+    browsers don't send to the server, so keep it on the device: no referrer, no third-party
+    scripts (enforced by the CSP), and nothing for search engines to index.
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Care team invite — Onry</title>
+  <link rel="icon" href="/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <img class="logo" src="/assets/logo.png" alt="Onry logo" />
+      <span class="name"><a href="/">Onry</a></span>
+    </header>
+
+    <main>
+      <section id="invite" hidden>
+        <h1>You've been invited to a care team</h1>
+        <p class="tagline">
+          Open this invite in the Onry app to ask to join. A care team admin approves new
+          members before they can see anything.
+        </p>
+
+        <div class="card">
+          <h2 class="card-title">Have Onry installed?</h2>
+          <p>If the app didn't open on its own, tap the button below.</p>
+          <p><a id="open-app" class="button" href="/">Open in Onry</a></p>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Don't have Onry yet?</h2>
+          <!-- Swap the contact link for the TestFlight / App Store link once there is one. -->
+          <p>
+            Onry is in private beta. <a href="/contact/">Ask for access</a>, install the app,
+            then come back and tap your invite link again.
+          </p>
+        </div>
+      </section>
+
+      <section id="invalid" hidden>
+        <h1>This invite link is incomplete</h1>
+        <p class="tagline">
+          Part of the link may have been cut off. Ask the person who invited you to send it
+          again.
+        </p>
+      </section>
+
+      <noscript>
+        <h1>You've been invited to a care team</h1>
+        <p class="tagline">Open your invite link on a phone with the Onry app installed.</p>
+      </noscript>
+    </main>
+
+    <footer class="site">
+      &copy; <span id="year"></span> Joe Hale · <a href="/">Home</a>
+    </footer>
+  </div>
+
+  <script src="/i.js"></script>
+</body>
+</html>
