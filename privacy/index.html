@@ -31,9 +31,8 @@
       <ul>
         <li><strong>Account information</strong> — your email address and password, used to create and sign in to your account, and the name you give yourself in the app. Passwords are stored only in hashed form.</li>
         <li><strong>Care recipient information</strong> — the name and, if you choose to add it, the date of birth of each care recipient you set up.</li>
-        <li><strong>Care team information</strong> — who is on each care recipient's care team and whether they are an admin or a supporter, who owns each care recipient, the invite links admins create (with an optional note about who each link is for), and requests to join a care team.</li>
-        <li><strong>Event data</strong> — the care events you and your care team log (for example, notes, categories and times), who logged each one, and the list of event types for each care recipient.</li>
-        <li><strong>Toilet reminder activity</strong> — if you use toilet reminders, what was done with each reminder (started, snoozed, skipped or missed) is logged as an event for the care recipient, so the care team can see it.</li>
+        <li><strong>Care team information</strong> — who is on each care recipient's care team and whether they are an admin or a supporter, who owns each care team, the invite links admins create (with an optional note about who each link is for), and requests to join a care team.</li>
+        <li><strong>Event data</strong> — the care events you and your care team log (for example, notes, categories and times), who logged each one, and the list of event types for each care recipient. This includes events the app records for you, such as how you responded to a reminder notification (for example, whether it was acted on, snoozed, skipped or missed).</li>
         <li><strong>Event history</strong> — if an event is changed or removed, we keep a copy of the earlier version, so that a care recipient's record can't be lost or quietly rewritten.</li>
       </ul>
       <p>
@@ -43,10 +42,9 @@
 
       <h2>Information stored on your device</h2>
       <p>
-        Onry keeps your sign-in session in your device's secure storage. Toilet reminder settings
-        (how often, and between which times) and the care recipient you last selected are stored
-        on your device only. Toilet reminders are scheduled by your own phone as local
-        notifications: Onry does not send push notifications and does not collect a
+        Onry keeps your sign-in session in your device's secure storage. Your reminder settings
+        and the care recipient you last selected are stored on your device only. Reminders are
+        scheduled by your own phone as local notifications: Onry does not send push notifications and does not collect a
         notification token for your device.
       </p>
 
@@ -98,8 +96,9 @@
       <h3>Deleting your account</h3>
       <p>
         You can delete your account in the app, from <strong>Settings → Delete Account</strong>.
-        If you own any care recipients, you first choose for each one whether to hand it to
-        another admin or delete it along with your account.
+        If you're the owner of any care teams, you first choose for each one whether to hand
+        ownership to another admin or to delete that care recipient's record along with your
+        account.
       </p>
       <p>
         Your account is deleted 30 days after you ask. Straight away, you lose access to your care
@@ -110,19 +109,19 @@
         recipient's record. They are shown with a label such as "Former carer 1" instead of your
         name, which an admin of that care recipient can rename.
       </p>
-      <h3>Deleting a care recipient</h3>
+      <h3>Deleting a care recipient's record</h3>
       <p>
-        The owner of a care recipient can delete it in the app. It disappears for everyone on the
-        care team straight away, and the owner can restore it for 30 days. After 30 days the care
-        recipient and everything recorded about them (their events, event history, event types,
+        The owner of a care team can delete the care recipient's record in the app. It disappears
+        for everyone on the care team straight away, and the owner can restore it for 30 days.
+        After 30 days the care recipient's record and everything recorded about them (their events, event history, event types,
         care team, invite links and join requests) are deleted permanently.
       </p>
       <h3>Backups and retention</h3>
       <p>
         We keep your data for as long as your account or the care recipient's record is active,
         and delete it as described above. Encrypted backups are kept so we can recover from a
-        failure: daily backups for 30 days, and weekly and monthly backups for one year. Deleted
-        data can remain in these backups until they expire. Backups are only
+        failure: daily backups for 30 days, weekly backups for 120 days, and monthly backups for
+        one year. Deleted data can remain in these backups until they expire. Backups are only
         used to restore the service, and data deleted before a restore is deleted again.
       </p>
       <p>
