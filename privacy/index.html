@@ -18,62 +18,131 @@
 
     <main>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: September 13, 2026</p>
+      <p class="updated">Last updated: October 19, 2026</p>
 
       <p>
         Onry ("Onry", "we", "us") is a mobile app that helps caregivers log and share
-        events about the people they care for ("carees"). This policy explains what
-        information Onry collects, how it's used, and the choices you have.
+        events about the people they care for ("care recipients"). This policy explains what
+        information Onry collects, how it's used, who can see it, and the choices you have.
       </p>
 
       <h2>Information we collect</h2>
       <p>Onry collects the information you and your care team enter into the app, including:</p>
       <ul>
-        <li><strong>Account information</strong> — your email address, used to create and sign in to your account.</li>
-        <li><strong>Care team information</strong> — the carees you set up, and the caregivers you invite as admins or supporters for each caree.</li>
-        <li><strong>Event data</strong> — the care events you and your care team log (for example, notes, categories, timestamps, and, if you choose to add it, a location for an event).</li>
+        <li><strong>Account information</strong> — your email address and password, used to create and sign in to your account, and the name you give yourself in the app. Passwords are stored only in hashed form.</li>
+        <li><strong>Care recipient information</strong> — the name and, if you choose to add it, the date of birth of each care recipient you set up.</li>
+        <li><strong>Care team information</strong> — who is on each care recipient's care team and whether they are an admin or a supporter, who owns each care recipient, the invite links admins create (with an optional note about who each link is for), and requests to join a care team.</li>
+        <li><strong>Event data</strong> — the care events you and your care team log (for example, notes, categories and times), who logged each one, and the list of event types for each care recipient.</li>
+        <li><strong>Toilet reminder activity</strong> — if you use toilet reminders, what was done with each reminder (started, snoozed, skipped or missed) is logged as an event for the care recipient, so the care team can see it.</li>
+        <li><strong>Event history</strong> — if an event is changed or removed, we keep a copy of the earlier version, so that a care recipient's record can't be lost or quietly rewritten.</li>
       </ul>
       <p>
         We don't collect analytics, advertising identifiers, or device tracking data, and Onry
-        does not access your device's location in the background — any location attached to an
-        event is entered or added by you.
+        does not access your device's location.
+      </p>
+
+      <h2>Information stored on your device</h2>
+      <p>
+        Onry keeps your sign-in session in your device's secure storage. Toilet reminder settings
+        (how often, and between which times) and the care recipient you last selected are stored
+        on your device only. Toilet reminders are scheduled by your own phone as local
+        notifications: Onry does not send push notifications and does not collect a
+        notification token for your device.
       </p>
 
       <h2>How we use your information</h2>
       <p>Information you provide is used only to operate the app for you and your care team:</p>
       <ul>
         <li>To create your account and authenticate you.</li>
-        <li>To store and display the events and care team data you and your invited caregivers enter.</li>
-        <li>To share event data with the caregivers you've explicitly added to a caree's care team.</li>
+        <li>To store and display the events and care team data you and your care team enter.</li>
+        <li>To share event data with the people an admin has added to a care recipient's care team.</li>
+        <li>To limit how quickly certain actions can be repeated (such as creating invite links or logging events), which protects your data if an account is misused.</li>
+        <li>To respond to you when you contact us.</li>
       </ul>
       <p>We do not sell your information, and we do not use it for advertising.</p>
 
       <h2>Who can see your data</h2>
       <p>
-        Data about a caree is visible only to the caregivers added to that caree's care team
-        (as admins or supporters). Access is enforced at the database level, so a caregiver can
-        only see carees they've been explicitly added to.
+        Data about a care recipient is visible only to the members of that care recipient's care
+        team. Access is enforced at the database level, so a caregiver can only see care
+        recipients whose team they have joined.
+      </p>
+      <ul>
+        <li><strong>Admins</strong> can see the care recipient's full event history, including earlier versions of changed or removed events.</li>
+        <li><strong>Supporters</strong> can see events logged in the last 7 days, plus any events they logged themselves.</li>
+        <li><strong>Your name</strong> is visible to the other members of every care team you're on.</li>
+        <li>
+          <strong>Joining a care team</strong> — invite links grant nothing by themselves. When
+          you use one, the care recipient's admins see your name and email address so they can
+          decide whether to approve you. You can't see anything about the care recipient until
+          you're approved. Invite links work once and expire after 7 days, and we store only a
+          fingerprint of each link, never the link itself.
+        </li>
+      </ul>
+      <p>
+        If you leave a care team, or an admin removes you, you lose access to that care
+        recipient. The events you logged stay on the care recipient's record for the rest of the
+        team.
       </p>
 
-      <h2>Where your data is stored</h2>
+      <h2>Service providers</h2>
+      <p>We use a small number of service providers to run Onry:</p>
+      <ul>
+        <li><a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a> hosts our database and handles authentication.</li>
+        <li><a href="https://www.cloudflare.com/developer-platform/products/r2/" target="_blank" rel="noopener">Cloudflare R2</a> stores our nightly database backups. Backups are encrypted before they leave our systems, and Cloudflare cannot read them.</li>
+        <li><a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> receives messages you send through our contact form.</li>
+      </ul>
+      <p>We don't share your data with anyone else.</p>
+
+      <h2>Deleting your data</h2>
+      <h3>Deleting your account</h3>
       <p>
-        Onry's data is stored with <a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a>,
-        our backend infrastructure provider, which hosts our database, authentication, and file storage.
-        We don't share your data with any other third party.
+        You can delete your account in the app, from <strong>Settings → Delete Account</strong>.
+        If you own any care recipients, you first choose for each one whether to hand it to
+        another admin or delete it along with your account.
+      </p>
+      <p>
+        Your account is deleted 30 days after you ask. Straight away, you lose access to your care
+        teams, your teammates see you as leaving the team, your open invite links stop working and
+        your pending join requests are withdrawn. During those 30 days you can sign in and restore
+        your account. After 30 days your name, settings, email address and password are deleted
+        permanently. The events you logged are kept, because they are part of each care
+        recipient's record. They are shown with a label such as "Former carer 1" instead of your
+        name, which an admin of that care recipient can rename.
+      </p>
+      <h3>Deleting a care recipient</h3>
+      <p>
+        The owner of a care recipient can delete it in the app. It disappears for everyone on the
+        care team straight away, and the owner can restore it for 30 days. After 30 days the care
+        recipient and everything recorded about them (their events, event history, event types,
+        care team, invite links and join requests) are deleted permanently.
+      </p>
+      <h3>Backups and retention</h3>
+      <p>
+        We keep your data for as long as your account or the care recipient's record is active,
+        and delete it as described above. Encrypted backups are kept so we can recover from a
+        failure: daily backups for 30 days, and weekly and monthly backups for one year. Deleted
+        data can remain in these backups until they expire. Backups are only
+        used to restore the service, and data deleted before a restore is deleted again.
+      </p>
+      <p>
+        If you can't use the in-app options, or want something else deleted,
+        <a href="/contact/">contact us</a>.
       </p>
 
-      <h2>Data retention and deletion</h2>
+      <h2>Security</h2>
       <p>
-        We retain your account and event data for as long as your account is active. If you'd like
-        your account and associated data deleted, <a href="/contact/">contact us</a> and we'll
-        delete it.
+        Data is encrypted in transit between the app and our servers. Access to every care
+        recipient's data is checked by the database itself for each request, not just by the app.
+        You can sign out of every device at once from <strong>Settings</strong> if you lose a
+        phone or signed in on one that isn't yours.
       </p>
 
       <h2>Children's privacy</h2>
       <p>
-        Onry is intended for use by caregivers (adults). A caree profile may represent a child or
-        other dependent, but that information is entered and controlled by the caregiver, not by
-        the caree directly.
+        Onry is intended for use by caregivers (adults). A care recipient may be a child or
+        other dependent, but their information is entered and controlled by their caregivers, not
+        by the care recipient directly.
       </p>
 
       <h2>Changes to this policy</h2>
