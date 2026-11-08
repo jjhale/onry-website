@@ -18,7 +18,7 @@
 
     <main>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: October 19, 2026</p>
+      <p class="updated">Last updated: November 7, 2026</p>
 
       <p>
         Onry ("Onry", "we", "us") is a mobile app that helps caregivers log and share
@@ -29,23 +29,77 @@
       <h2>Information we collect</h2>
       <p>Onry collects the information you and your care team enter into the app, including:</p>
       <ul>
-        <li><strong>Account information</strong> — your email address and password, used to create and sign in to your account, and the name you give yourself in the app. Passwords are stored only in hashed form.</li>
-        <li><strong>Care recipient information</strong> — the name and, if you choose to add it, the date of birth of each care recipient you set up.</li>
+        <li><strong>Account information</strong> — your email address and password, used to create and sign in to your account, the name you give yourself in the app and, if you add one, your profile photo. Passwords are stored only in hashed form.</li>
+        <li><strong>Care recipient information</strong> — the name and, if you choose to add them, the date of birth and photo of each care recipient you set up. Photos are cropped, shrunk and re-encoded on your phone before they're uploaded, which removes the data a camera stores in a photo, such as where it was taken.</li>
         <li><strong>Care team information</strong> — who is on each care recipient's care team and whether they are an admin or a supporter, who owns each care team, the invite links admins create (with an optional note about who each link is for), and requests to join a care team.</li>
         <li><strong>Event data</strong> — the care events you and your care team log (for example, notes, categories and times), who logged each one, and the list of event types for each care recipient. This includes events the app records for you, such as how you responded to a reminder notification (for example, whether it was acted on, snoozed, skipped or missed).</li>
         <li><strong>Event history</strong> — if an event is changed or removed, we keep a copy of the earlier version, so that a care recipient's record can't be lost or quietly rewritten.</li>
+        <li><strong>Places</strong> — the named places a care recipient spends time at (for example Home or School), each with a time zone, and which place the care recipient was at, and when. A place is stored only as the name your care team gives it, not as an address or a position on a map.</li>
+        <li><strong>Shifts</strong> — if an admin turns shifts on for a care recipient: the kinds of shift, the roster, when each person went on and off duty, the answers to prompts and to-dos, and the notes admins add when they check a shift.</li>
+        <li><strong>Walks</strong> — if you use place and motion sensing (see <a href="#location-and-motion">Location and motion</a>): the start and end time, steps and distance of walks with the care recipient.</li>
       </ul>
       <p>
-        We don't collect analytics, advertising identifiers, or device tracking data, and Onry
-        does not access your device's location.
+        We don't collect analytics, advertising identifiers, or device tracking data, and your
+        phone's location never reaches our servers.
+      </p>
+
+      <h2 id="location-and-motion">Location and motion</h2>
+      <p>
+        On iPhone, Onry can use your phone's location and motion to notice where the care
+        recipient is, and when you go out or come back, so you don't have to tap to record it.
+        This is optional, and your location stays on your phone: our servers never receive
+        coordinates, only the name of one of the care recipient's places, as if you had picked
+        it yourself.
+      </p>
+      <h3>Who turns it on</h3>
+      <ul>
+        <li>An admin turns place sensing on for each care recipient. While it's off, no phone on the care team senses anything for that care recipient.</li>
+        <li>You choose when your own phone is used: <strong>Never</strong>, <strong>While I'm clocked in</strong>, <strong>During my rostered shifts</strong> or <strong>Always</strong>. This is set on your phone, and nobody else can change it.</li>
+        <li>iOS asks your permission first: location "While Using" to suggest places, "Always" for the modes that work while Onry is closed, and Motion &amp; Fitness. You can change these in iOS Settings at any time.</li>
+      </ul>
+      <h3>What stays on your phone</h3>
+      <ul>
+        <li><strong>A map of the care recipient's places</strong>, learned from where your phone was when you logged a place or tapped <strong>I'm here now</strong>. It's kept in your phone's secure storage, isn't included in iCloud backups or moved to a new phone, and is deleted when you sign out. You can see which places your phone has learned, and forget them, in the app.</li>
+        <li><strong>Every location reading.</strong> iOS tells Onry when your phone arrives at or leaves one of the care recipient's places (at most 20 of them), and Onry uses your current location to suggest which place you're at when you log something.</li>
+        <li><strong>Your motion history and step counts</strong>, which iOS records. Onry reads them to tell whether you're carrying your phone, and to find walks.</li>
+      </ul>
+      <h3>What your phone sends</h3>
+      <p>
+        Your phone's movements only count while you're with the care recipient: while you're on
+        a shift with them, or after you've said they're with you. At other times, such as on your
+        commute or while someone else is looking after them, Onry records nothing about where
+        your phone goes. While they count, your phone can log:
+      </p>
+      <ul>
+        <li>which place the care recipient has arrived at, or that they're on the move</li>
+        <li>that you've gone out, or come back, if you're one of the family members looking after the care recipient at home</li>
+        <li>a walk with the care recipient, with its steps and distance (these are your steps, standing in for theirs)</li>
+      </ul>
+      <p>
+        Anything your phone logs is shown as coming from your phone (for example "Alex's phone
+        left Home at 08:30"), and you're asked to confirm it. Tapping <strong>Wrong</strong> undoes
+        it. When Onry can't tell that you're carrying your phone, it asks you instead of logging.
+      </p>
+      <p>
+        Location and motion features aren't available on Android.
       </p>
 
       <h2>Information stored on your device</h2>
       <p>
-        Onry keeps your sign-in session in your device's secure storage. Your reminder settings
-        and the care recipient you last selected are stored on your device only. Reminders are
-        scheduled by your own phone as local notifications: Onry does not send push notifications and does not collect a
-        notification token for your device.
+        Onry keeps your sign-in session and the map of the care recipient's places in your
+        device's secure storage. Your reminder settings, when your phone may be used for
+        location and motion, and the care recipient you last selected are stored on your device
+        only.
+      </p>
+
+      <h2>Notifications</h2>
+      <p>
+        Many reminders are scheduled by your own phone. Onry also sends notifications from our
+        servers, for example when someone asks to join a care team or a prompt needs another
+        carer. To reach your phone, we keep the notification address Apple gives it. We remove
+        it when you sign out on that phone or turn these notifications off in Settings, and when
+        your account is deleted. Notifications pass through Expo and Apple, so their text is kept plain:
+        who did what kind of thing, never the details of a care event.
       </p>
 
       <h2>How we use your information</h2>
@@ -68,7 +122,9 @@
       <ul>
         <li><strong>Admins</strong> can see the care recipient's full event history, including earlier versions of changed or removed events.</li>
         <li><strong>Supporters</strong> can see events logged in the last 7 days, plus any events they logged themselves.</li>
-        <li><strong>Your name</strong> is visible to the other members of every care team you're on.</li>
+        <li><strong>Places and walks</strong> are events, so they're visible to the care team in the same way.</li>
+        <li><strong>Shifts</strong> — admins can see everyone's shifts and time on duty. Supporters can see their own, and the names of the people on duty with the care recipient now, but not anyone else's kind of shift or hours.</li>
+        <li><strong>Your name and profile photo</strong> are visible to the other members of every care team you're on.</li>
         <li>
           <strong>Joining a care team</strong> — invite links grant nothing by themselves. When
           you use one, the care recipient's admins see your name and email address so they can
@@ -86,7 +142,8 @@
       <h2>Service providers</h2>
       <p>We use a small number of service providers to run Onry:</p>
       <ul>
-        <li><a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a> hosts our database and handles authentication.</li>
+        <li><a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a> hosts our database and photos, and handles authentication.</li>
+        <li><a href="https://expo.dev" target="_blank" rel="noopener">Expo</a> delivers our notifications to your phone through Apple. It receives each notification's text and your phone's notification address.</li>
         <li><a href="https://www.cloudflare.com/developer-platform/products/r2/" target="_blank" rel="noopener">Cloudflare R2</a> stores our nightly database backups. Backups are encrypted before they leave our systems, and Cloudflare cannot read them.</li>
         <li><a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> receives messages you send through our contact form.</li>
       </ul>
@@ -104,8 +161,8 @@
         Your account is deleted 30 days after you ask. Straight away, you lose access to your care
         teams, your teammates see you as leaving the team, your open invite links stop working and
         your pending join requests are withdrawn. During those 30 days you can sign in and restore
-        your account. After 30 days your name, settings, email address and password are deleted
-        permanently. The events you logged are kept, because they are part of each care
+        your account. After 30 days your name, profile photo, settings, email address and password
+        are deleted permanently. The events you logged are kept, because they are part of each care
         recipient's record. They are shown with a label such as "Former carer 1" instead of your
         name, which an admin of that care recipient can rename.
       </p>
@@ -113,8 +170,9 @@
       <p>
         The owner of a care team can delete the care recipient's record in the app. It disappears
         for everyone on the care team straight away, and the owner can restore it for 30 days.
-        After 30 days the care recipient's record and everything recorded about them (their events, event history, event types,
-        care team, invite links and join requests) are deleted permanently.
+        After 30 days the care recipient's record and everything recorded about them (their photo, events, event history, event types,
+        places, shifts and roster, prompts, care team, invite links and join requests) are deleted
+        permanently.
       </p>
       <h3>Backups and retention</h3>
       <p>
@@ -122,7 +180,9 @@
         and delete it as described above. Encrypted backups are kept so we can recover from a
         failure: daily backups for 30 days, weekly backups for 120 days, and monthly backups for
         one year. Deleted data can remain in these backups until they expire. Backups are only
-        used to restore the service, and data deleted before a restore is deleted again.
+        used to restore the service after a failure. If we ever restore one, we'll tell you,
+        because a deletion you asked for after the backup was made may need to be asked for
+        again.
       </p>
       <p>
         If you can't use the in-app options, or want something else deleted,
@@ -134,7 +194,8 @@
         Data is encrypted in transit between the app and our servers. Access to every care
         recipient's data is checked by the database itself for each request, not just by the app.
         You can sign out of every device at once from <strong>Settings</strong> if you lose a
-        phone or signed in on one that isn't yours.
+        phone or signed in on one that isn't yours. Signing out on a phone also deletes its map
+        of the care recipient's places and stops it noticing when it arrives at or leaves them.
       </p>
 
       <h2>Children's privacy</h2>
