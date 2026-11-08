@@ -37,7 +37,6 @@
         <li><strong>Places</strong> — the named places a care recipient spends time at (for example Home or School), each with a time zone, and which place the care recipient was at, and when. A place is stored only as the name your care team gives it, not as an address or a position on a map.</li>
         <li><strong>Shifts</strong> — if an admin turns shifts on for a care recipient: the kinds of shift, the roster, when each person went on and off duty, the answers to prompts and to-dos, and the notes admins add when they check a shift.</li>
         <li><strong>Walks</strong> — if you use place and motion sensing (see <a href="#location-and-motion">Location and motion</a>): the start and end time, steps and distance of walks with the care recipient.</li>
-        <li><strong>Push tokens</strong> — an address for each phone you sign in on, so Onry can send it notifications.</li>
       </ul>
       <p>
         We don't collect analytics, advertising identifiers, or device tracking data, and your
@@ -95,13 +94,12 @@
 
       <h2>Notifications</h2>
       <p>
-        Many reminders are scheduled by your own phone as local notifications. Onry also sends
-        push notifications, for example when someone asks to join a care team or a prompt needs
-        another carer. To do this we store a push token for each phone you sign in on. It's
-        removed when you sign out on that phone, when you turn remote notifications off in
-        Settings, and when your account is deleted. Push notifications pass through Expo and
-        Apple, so their text is kept plain: who did what kind of thing, never the details of a
-        care event.
+        Many reminders are scheduled by your own phone. Onry also sends notifications from our
+        servers, for example when someone asks to join a care team or a prompt needs another
+        carer. To reach your phone, we keep the notification address Apple gives it. We remove
+        it when you sign out on that phone or turn these notifications off in Settings, and when
+        your account is deleted. Notifications pass through Expo and Apple, so their text is kept plain:
+        who did what kind of thing, never the details of a care event.
       </p>
 
       <h2>How we use your information</h2>
@@ -145,7 +143,7 @@
       <p>We use a small number of service providers to run Onry:</p>
       <ul>
         <li><a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a> hosts our database and photos, and handles authentication.</li>
-        <li><a href="https://expo.dev" target="_blank" rel="noopener">Expo</a> delivers push notifications to your phone through Apple's push notification service. It receives your phone's push token and the notification's text.</li>
+        <li><a href="https://expo.dev" target="_blank" rel="noopener">Expo</a> delivers our notifications to your phone through Apple. It receives each notification's text and your phone's notification address.</li>
         <li><a href="https://www.cloudflare.com/developer-platform/products/r2/" target="_blank" rel="noopener">Cloudflare R2</a> stores our nightly database backups. Backups are encrypted before they leave our systems, and Cloudflare cannot read them.</li>
         <li><a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> receives messages you send through our contact form.</li>
       </ul>
@@ -163,8 +161,8 @@
         Your account is deleted 30 days after you ask. Straight away, you lose access to your care
         teams, your teammates see you as leaving the team, your open invite links stop working and
         your pending join requests are withdrawn. During those 30 days you can sign in and restore
-        your account. After 30 days your name, profile photo, settings, push tokens, email address
-        and password are deleted permanently. The events you logged are kept, because they are part of each care
+        your account. After 30 days your name, profile photo, settings, email address and password
+        are deleted permanently. The events you logged are kept, because they are part of each care
         recipient's record. They are shown with a label such as "Former carer 1" instead of your
         name, which an admin of that care recipient can rename.
       </p>
