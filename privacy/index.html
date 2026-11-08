@@ -180,7 +180,9 @@
         and delete it as described above. Encrypted backups are kept so we can recover from a
         failure: daily backups for 30 days, weekly backups for 120 days, and monthly backups for
         one year. Deleted data can remain in these backups until they expire. Backups are only
-        used to restore the service, and data deleted before a restore is deleted again.
+        used to restore the service after a failure. If we ever restore one, we'll tell you,
+        because a deletion you asked for after the backup was made may need to be asked for
+        again.
       </p>
       <p>
         If you can't use the in-app options, or want something else deleted,
