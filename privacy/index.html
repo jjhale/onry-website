@@ -37,6 +37,7 @@
         <li><strong>Places</strong> — the named places a care recipient spends time at (for example Home or School), each with a time zone, and which place the care recipient was at, and when. A place is stored only as the name your care team gives it, not as an address or a position on a map.</li>
         <li><strong>Prompts</strong> — the prompts and to-dos an admin sets up for a care recipient (for example a toilet reminder), how important each one is, and each person's answers.</li>
         <li><strong>Shifts</strong> — if an admin turns shifts on for a care recipient: the kinds of shift, the roster, when each person went on and off duty, when someone is out and when they expect to be back, and the checks and notes admins add to past shifts.</li>
+        <li><strong>Walks</strong> — if you log a walk your phone noticed (see <a href="#location-and-motion">Location and motion</a>): its start and end time, and the steps and distance your phone counted.</li>
       </ul>
       <p>
         We don't collect analytics, advertising identifiers, or device tracking data, and your
@@ -47,7 +48,8 @@
       <p>
         On iPhone, Onry can use your phone's location to suggest which of the care recipient's
         places you're at when you log something. While you're on a shift, it can also ask
-        whether the care recipient has arrived at or left one of their places. This is optional
+        whether the care recipient has arrived at or left one of their places and, if you turn
+        it on, whether to log a walk you took with them. This is optional
         and off until you turn it on. Your location stays on your phone: our servers never
         receive coordinates, only which of the care recipient's places they're at, as if you
         had picked it yourself.
@@ -56,19 +58,21 @@
       <ul>
         <li>An admin turns on <strong>Places from phones</strong> for each care recipient. While it's off, no phone on the care team uses its location for that care recipient.</li>
         <li>You choose when your own phone is used, in <strong>Settings → This phone's location and motion</strong>: <strong>Never</strong> (the default), <strong>While I'm clocked in</strong>, <strong>During my rostered shifts</strong> or <strong>Always</strong>. This is set on your phone, and nobody else can change it. With During my rostered shifts, Onry watches the places all the time and ignores what it notices outside your shifts, so iOS may still show that Onry used your location then.</li>
-        <li>iOS asks your permission first: location "While Using" to suggest places, "Always" to notice when your phone arrives at or leaves a place while Onry is closed, and Motion &amp; Fitness. You can change these in iOS Settings at any time.</li>
+        <li><strong>Notice walks</strong> is a separate switch on your phone, and it's off until you turn it on.</li>
+        <li>iOS asks your permission first: location "While Using" to suggest places, "Always" to notice when your phone arrives at or leaves a place while Onry is closed, and Motion &amp; Fitness to notice walks and check you're carrying your phone. You can change these in iOS Settings at any time.</li>
       </ul>
       <h3>What stays on your phone</h3>
       <ul>
         <li><strong>A map of the care recipient's places</strong>, learned from where your phone was when you tapped <strong>I'm here now</strong>, or logged a place while you were on a shift. It's kept in your phone's secure storage, isn't included in iCloud backups or moved to a new phone, and is deleted when you sign out, leave the care team, or an admin turns Places from phones off. You can see which places your phone has learned, and forget them, in the app.</li>
         <li><strong>Every location reading.</strong> iOS tells Onry when your phone arrives at or leaves one of the care recipient's places (at most 20 places in all), and Onry uses your current location to suggest which place you're at when you log something.</li>
-        <li><strong>Your motion history</strong>, which iOS records (for example walking, driving or still). Onry reads it on your phone to tell whether you were carrying your phone when it arrived or left, so that it doesn't ask about a phone left in a bag or a car. It's never sent to us.</li>
+        <li><strong>Your motion history and step counts</strong>, which iOS records (for example walking, driving or still). Onry reads them on your phone to tell whether you were carrying your phone when it arrived or left, so that it doesn't ask about a phone left in a bag or a car, and, with Notice walks on, to find walks of 10 minutes or more. They're never sent to us, except for the time, steps and distance of a walk you choose to log.</li>
       </ul>
       <h3>What gets recorded</h3>
-      <p>Nothing about a care recipient's location is recorded unless you choose it:</p>
+      <p>Nothing your phone notices is recorded unless you choose it:</p>
       <ul>
         <li><strong>Suggestions.</strong> When you log something, Onry may mark the place you're at as <strong>Nearby</strong>. It's only saved if you pick it and save, as if you had picked it yourself.</li>
         <li><strong>Arrived? and Left? questions.</strong> Only while you're on a shift with the care recipient that you started in the app, your phone may ask "Arrived at School?" or "Left School?". If you tap <strong>Log it</strong>, Onry records that the care recipient is at that place, or on the move, at the time your phone arrived or left, and marks the record as logged from a phone. If you ignore the question, nothing is recorded. At other times, such as on your commute or while someone else is looking after them, Onry asks nothing and records nothing about where your phone goes.</li>
+        <li><strong>Walks.</strong> With Notice walks on, if you were on a shift with the care recipient that you started in the app for the whole of a walk of 10 minutes or more, your phone may ask "Log a walk?". If you tap <strong>Log it</strong>, Onry records the walk's start and end time and the steps and distance your phone counted (your steps, standing in for theirs), and marks it as logged from a phone. If you ignore the question, nothing is recorded. A walk home after your shift asks nothing.</li>
       </ul>
       <p>
         Location and motion features aren't available on Android.
@@ -78,14 +82,15 @@
       <p>
         Onry keeps your sign-in session and the map of the care recipient's places in your
         device's secure storage. Your notification settings (such as which prompts to notify you
-        about), when your phone may be used for location and motion, and the care recipient you
-        last selected are stored on your device only.
+        about), when your phone may be used for location and motion, whether it notices walks
+        and which walks it has asked about, and the care recipient you last selected are stored
+        on your device only.
       </p>
 
       <h2>Notifications</h2>
       <p>
-        Prompts, and the Arrived? and Left? questions, are notifications your own phone
-        schedules. Onry also sends notifications from our servers when someone asks to join a
+        Prompts, and the Arrived?, Left? and Log a walk? questions, are notifications your own
+        phone schedules. Onry also sends notifications from our servers when someone asks to join a
         care team you manage or joins it, and when your own request to join is approved or
         declined. You can turn these off with <strong>Notifications from other people</strong> in
         Settings. To reach your phone, we keep the notification address Apple gives it. We remove
@@ -115,7 +120,7 @@
       <ul>
         <li><strong>Admins</strong> can see the care recipient's full event history, including earlier versions of changed or removed events.</li>
         <li><strong>Supporters</strong> can see events logged in the last 7 days, plus any events they logged themselves.</li>
-        <li><strong>Places</strong>, including those logged from a phone, are events, so they're visible to the care team in the same way.</li>
+        <li><strong>Places and walks</strong>, including those logged from a phone, are events, so they're visible to the care team in the same way.</li>
         <li><strong>Shifts</strong> — admins can see everyone's shifts and time on duty. Supporters can see their own, and the names of the people on duty with the care recipient now, but not anyone else's kind of shift or hours.</li>
         <li><strong>Your name and profile photo</strong> are visible to the other members of every care team you're on.</li>
         <li>
